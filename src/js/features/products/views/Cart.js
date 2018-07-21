@@ -51,6 +51,9 @@ class Cart extends React.Component {
                               </li>
                           )
                         }
+                        return(
+                            <div></div>
+                        )
                       })
                     }
                     </ul>
