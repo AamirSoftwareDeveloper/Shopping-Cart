@@ -11,7 +11,9 @@ class ProductsView extends React.Component{
   constructor(){
     super()
     ProductsAction.fetchProducts()
-    ProductsStores.products = ProductsData.products
+    if(ProductsStores.products.length == null || ProductsStores.products.length<1){
+      ProductsStores.products = ProductsData.products
+    }
   }
 
   ImportAllImages(r) {
