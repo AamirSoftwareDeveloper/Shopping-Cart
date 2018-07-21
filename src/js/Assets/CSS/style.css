@@ -29,8 +29,8 @@
 .cart-value-span{
   background:#fff;
   color:#359000;
-  border-radius: 5px;
-  width:25px;
+  border-radius: 2px;
+  padding:5px;
 }
 
 /* When the screen is less than 400 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */

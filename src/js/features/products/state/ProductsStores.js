@@ -47,7 +47,7 @@ class ProductsStores {
         }
         if(action === 'remove') {
           if(!this.products[i].addedToCart) {
-            alert("Item is not in cart")
+            alert(this.products[i].productName+" is not in cart!!")
           }
           if(this.products[i].quantity > 1) {
             this.products[i].quantity--

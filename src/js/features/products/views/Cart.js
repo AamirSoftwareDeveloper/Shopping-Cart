@@ -8,6 +8,7 @@ class Cart extends React.Component {
 
   constructor(props){
     super(props)
+    ProductsStores.isLoading = true
     if(ProductsStores.products.length == null || ProductsStores.products.length <1){
       const { history } = this.props
       history.push('/')
@@ -31,7 +32,7 @@ class Cart extends React.Component {
                 <div className="card">
                   <h5 className="card-header">Check Out
                     <Link to="/">
-                      <button className="btn btn-custom float-right">Shop More</button>
+                      <button className="btn btn-custom float-right">Continue Shopping</button>
                     </Link>
                   </h5>
                     <ul className="list-group list-group-flush">
@@ -45,8 +46,8 @@ class Cart extends React.Component {
                                       {product.productName}
                                       <img className="cart-img float-right" src={images[product.imageName]} alt={product.productName} />
                                     </h5>
-                                    <p className="card-text">Quantity : {product.quantity}</p>
-                                    <p className="card-text float-right">Price : ₹{product.quantity*product.productPrice}</p>
+                                    <p className="card-text"><strong>Quantity : {product.quantity}</strong></p>
+                                    <p className="card-text float-right"><strong>Price : ₹{product.quantity*product.productPrice}</strong></p>
                                   </div>
                               </li>
                           )
@@ -61,7 +62,9 @@ class Cart extends React.Component {
                 <br/>
           </div>
             <div className="col-lg-8">
-              <button className="btn btn-custom float-right" onClick={ProductsAction.placeOrder}>Place Order</button>
+              <button className="btn btn-custom float-right"
+                          onClick={ProductsAction.placeOrder}
+                          disabled={ProductsStores.cartTotalAmount === 0 ? true : false}>Place Order</button>
             </div>
             <div className="col-lg-4">
               <strong className="float-right">Total Amount : ₹{ProductsStores.cartTotalAmount}</strong>

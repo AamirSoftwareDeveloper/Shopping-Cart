@@ -25,12 +25,12 @@ const Header = observerWithDisplayName(() =>  {
                 <form className="form-inline mt-2 mt-md-0" hidden={!UserDetailsStore.isAuthenticated}>
                 <Link to="/cart">
                   <button className="btn btn-custom btn-lg" type="submit">
+                  Cart &nbsp;
                     <span className="cart-value-span">
                       <strong hidden = {false}>
                       {ProductsStore.cartItemCount === 0 ? '' : ProductsStore.cartItemCount}
                       </strong>
                     </span>
-                    Cart
                   </button>
                 </Link>
                 </form>
