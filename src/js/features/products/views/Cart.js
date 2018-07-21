@@ -14,7 +14,15 @@ class Cart extends React.Component {
       window.location.reload()
     }
   }
+
+  ImportAllImages(r) {
+    let images = {}
+    r.keys().map((item, index) => { return images[item.replace('./', '')] = r(item)})
+    return images
+  }
+
   render(){
+    const images = this.ImportAllImages(require.context('../../../Assets/Images', false, /\.(png|jpe?g|svg)$/))
     return(
       <div className="container-fluid" id="bodyContent">
         <div className="row">
@@ -32,10 +40,13 @@ class Cart extends React.Component {
                         if(product.addedToCart){
                           return(
                               <li className="list-group-item" key={product.productKey}>
-                                  <div className="card-body">
-                                    <h5 className="card-title">{product.productName}</h5>
+                                  <div className="card-text">
+                                    <h5 className="card-title">
+                                      {product.productName}
+                                      <img className="cart-img float-right" src={images[product.imageName]} alt={product.productName} />
+                                    </h5>
                                     <p className="card-text">Quantity : {product.quantity}</p>
-                                    <a className="btn btn-default">Price : ₹{product.quantity*product.productPrice}</a>
+                                    <p className="card-text float-right">Price : ₹{product.quantity*product.productPrice}</p>
                                   </div>
                               </li>
                           )
@@ -47,10 +58,10 @@ class Cart extends React.Component {
                 <br/>
           </div>
             <div className="col-lg-8">
-              <strong className="float-right">Total Amount : ₹{ProductsStores.cartTotalAmount}</strong>
+              <button className="btn btn-custom float-right" onClick={ProductsAction.placeOrder}>Place Order</button>
             </div>
             <div className="col-lg-4">
-              <button className="btn btn-custom float-right" onClick={ProductsAction.placeOrder}>Place Order</button>
+              <strong className="float-right">Total Amount : ₹{ProductsStores.cartTotalAmount}</strong>
             </div>
         </div>
       </div>
