@@ -1,0 +1,22 @@
+# Created by Aamir Iqubal
+
+# Intellij idea files
+*.iml
+*.iws
+*.ipr
+.idea
+
+# Maven target directory
+.target/
+
+# NodeModules
+node_modules/
+node/
+build/
+package-lock.json
+
+.classpath
+.project
+.settings
+/target/
+/bin/

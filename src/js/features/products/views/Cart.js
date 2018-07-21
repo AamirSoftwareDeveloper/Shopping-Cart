@@ -35,7 +35,7 @@ class Cart extends React.Component {
                                   <div className="card-body">
                                     <h5 className="card-title">{product.productName}</h5>
                                     <p className="card-text">Quantity : {product.quantity}</p>
-                                    <a className="btn btn-default">{product.quantity*product.productPrice}</a>
+                                    <a className="btn btn-default">Price : ₹{product.quantity*product.productPrice}</a>
                                   </div>
                               </li>
                           )
