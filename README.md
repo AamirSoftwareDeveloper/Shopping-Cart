@@ -5,7 +5,8 @@ This is a demo Cart Application
 `mvn clean package` This will compile all the code and create a package (.jar) file
 
 `java -jar cart-trunk-SNAPSHOT.jar` This will run the application on port 8081.
-
+# Data Source
+  JSON file in the resources folder
 # Shopping-Cart : Login
   Username : _cart.user@email.com_
   
