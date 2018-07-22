@@ -22,7 +22,7 @@ class ReportsActions {
 
   @action
   placeOrder(){
-    alert("Great! Your order has been placed, We shall contact you soon for further details.")
+    alert("Great! Your order has been placed, We will contact you soon for further details.")
     window.location.reload()
   }
 }
