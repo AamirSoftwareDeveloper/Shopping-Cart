@@ -10,9 +10,9 @@
         <relativePath/>
     </parent>
 
-    <name>Cart</name>
+    <name>shopping-cart</name>
     <groupId>com.poc.cart</groupId>
-    <artifactId>cart</artifactId>
+    <artifactId>shopping-cart</artifactId>
     <version>trunk-SNAPSHOT</version>
     <packaging>jar</packaging>
 
