@@ -5,7 +5,7 @@ export default class Footer extends React.Component{
     return(
       <div className="row footer">
         <div className="col-lg-12">
-          <div className="text-center">cart.com &copy; 2018.</div>
+          <div className="text-center">shopping-cart.com &copy; 2018.</div>
         </div>
       </div>
     )
