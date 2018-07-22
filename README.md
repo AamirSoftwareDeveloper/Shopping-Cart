@@ -1,5 +1,5 @@
 # Shopping-Cart @Author Aamir Iqubal
-This is a demo Cart Application
+This is a demo online shopping Application
 
 # To Run
 `mvn clean package` This will compile all the code and create a package (.jar) file
