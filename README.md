@@ -1,4 +1,4 @@
-# Cart @Author Aamir Iqubal
+# Shopping-Cart @Author Aamir Iqubal
 This is a demo Cart Application
 
 # To Run
