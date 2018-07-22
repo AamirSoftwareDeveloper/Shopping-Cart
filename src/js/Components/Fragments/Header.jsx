@@ -12,7 +12,7 @@ const Header = observerWithDisplayName(() =>  {
         <Link to="/">
           <span className="navbar-brand header-logo">
             <img id="cartHeadImage" alt="Cart" src={headerLogo}/>
-            <span className="LogoText"> {UserDetailsStore.authToBeChecked ? "" : (UserDetailsStore.isAuthenticated ? "Welcome to Cart": "Cart")} </span>
+            <span className="LogoText"> {UserDetailsStore.authToBeChecked ? "" : (UserDetailsStore.isAuthenticated ? "Welcome to Shopping-Cart": "Shopping-Cart")} </span>
           </span>
         </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
